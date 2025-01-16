@@ -10,6 +10,10 @@ body {
     color: rgb(51, 51, 51);
 }
 
+.header {
+    margin: 0;
+    padding: 0;
+}
 
 .header img {
     width: 100%;
@@ -54,7 +58,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 21px;
+    padding: 0;
 }
 
 header {
@@ -72,12 +76,17 @@ h1, h2, h3 {
 }
 
 section {
-    margin-bottom: 60px;
+    margin-bottom: 22px;
 }
 
 .hero {
     text-align: center;
     padding: 1px 0 12px;
+}
+
+.contacto {
+    text-align: center;
+    font-family: fond;
 }
 
 .hero h1 {
@@ -90,9 +99,12 @@ section {
 
 .hero p {
     font-family: "Julius Sans One", serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #000000;
+    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
+    1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, -1px 1px #ffffff;
 }
+
 
 .releases h2 {
     text-align: center;
@@ -101,7 +113,6 @@ section {
 
 .contact {
     text-align: center;
-    font-family: "Julius Sans One", serif;
 }
 
     /* CSS */
@@ -121,6 +132,7 @@ section {
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;
+      font-family: "Fontdiner Swanky", serif;
     }
     
     .button-33:hover {
