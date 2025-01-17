@@ -23,11 +23,38 @@
         <section class="hero">
             <h1>Bienvenido a tu estudio de Producción Musical</h1>
             <p> Un lugar para vestir a tu canción </p>
-            <p style="font-size: 1.5rem;" >&#127926;&#127926;&#127926;</p>
+            <p style="font-size: 1.5rem;" class="emojis" >&#127926;&#127926;&#127926;</p>
         </section>
         <section class="contacto">
             <div class="contact">
-                <button class="button-33" role="button">CONTACTO</button>
+                <button class="button-33" role="button" id="contactButton">CONTACTO</button>
+            </div>
+            <div id="contactPopup" class="popup" style="font-family:Swanky and Moo Moo; font-size: 22px;">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <form id="contactForm">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="whatsapp">WhatsApp:</label>
+                        <input type="text" id="whatsapp" name="whatsapp" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        
+                        <button type="submit" id="enviar" style="font-family:Fontdiner Swanky; font-size: 21px;">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="successPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <p style="font-family:Swanky and Moo Moo; font-size: 22px;" >Gracias por tu mensaje. Nos pondremos en contacto a la brevedad.</p>
+                </div>
             </div>
         </section>
         <section class="beat-making">
@@ -57,7 +84,7 @@
         </section> -->
 
         <section class="releases">
-            <h2>&#127928 &#127928 &#127928 &#127928</h2>
+            <h2 class="emojis">&#127928 &#127928 &#127928 &#127928</h2>
             <h2>Nuestros lanzamientos recientes</h2>
             <div class="carousel">
                 <div>
@@ -134,11 +161,11 @@
             <div class="contact">
                 <button class="button-33" role="button">BEATS STORE</button>
             </div>
-            <h2>&#127929 &#127929 &#127929</h2>
+            <h2 class="emojis">&#127929 &#127929 &#127929</h2>
         </section>
 
         <section class="studio">
-            <h2>Our Studio</h2>
+            <h2>Nuestro Estudio</h2>
             <div class="studio-grid">
                 <div class="studio-image">
                     <img src="src/img/studio01.jpg" alt="Studio Room">
@@ -196,7 +223,8 @@
         </section>
 
         <footer>
-            <p>info@amacamusic.com</p>
+            <p>&#128231 info@amacamusic.com</p>
+            <p>&#127758 Buenos Aires - Argentina</p>
             <p>&copy; 2025 AMACA PRODUCCIONES. All rights reserved.</p>
         </footer>
     </div>
@@ -204,5 +232,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>
+    <script src="popup.js" ></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init("izRHh7i5rqxnqKzpt");
+    })();
+    </script>
 </body>
 </html>
