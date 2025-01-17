@@ -54,6 +54,13 @@ body {
     font-style: normal;
   }  
 
+  .swanky-and-moo-moo-regular {
+    font-family: "Swanky and Moo Moo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -98,8 +105,8 @@ section {
 }
 
 .hero p {
-    font-family: "Julius Sans One", serif;
-    font-size: 1.2rem;
+    font-family: "Swanky and Moo Moo", serif;
+    font-size: 2rem;
     color: #000000;
     text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
     1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, -1px 1px #ffffff;
@@ -108,19 +115,22 @@ section {
 
 .releases h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .contact {
     text-align: center;
+    margin-bottom: 70px;
 }
 
     /* CSS */
     .button-33 {
       background-color: #e39ade00;
       border-radius: 100px;
-      box-shadow: rgba(101, 75, 101, 0.2) 0 -25px 18px -14px inset,rgba(187, 44, 149, 0.15) 0 1px 2px,rgba(187, 44, 156, 0.15) 0 2px 4px,rgba(187, 44, 137, 0.15) 0 4px 8px,rgba(151, 44, 187, 0.15) 0 8px 16px,rgba(187, 44, 168, 0.15) 0 16px 32px;
-      color: rgb(50, 49, 49);
+      box-shadow: rgba(0, 0, 0, 0.2) 0 -25px 18px -14px inset,rgba(187, 44, 149, 0.15) 0 1px 2px,rgba(187, 44, 156, 0.15) 0 2px 4px,rgba(187, 44, 137, 0.15) 0 4px 8px,rgba(151, 44, 187, 0.15) 0 8px 16px,rgba(187, 44, 168, 0.15) 0 16px 32px;
+      color: #ffffff;
+      text-shadow: 2px 0 #5a1b57, 0 -0.8px #5a1b57;
       cursor: pointer;
       display: inline-block;
       padding: 7px 20px;
@@ -128,22 +138,99 @@ section {
       text-decoration: none;
       transition: all 250ms;
       border: 0;
-      font-size: 16px;
+      font-size: 17px;
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;
       font-family: "Fontdiner Swanky", serif;
+      transition-duration: 700ms;
     }
     
     .button-33:hover {
-      box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+        color: #5a1b57;
+      box-shadow: rgba(253, 252, 252, 0.35) 0 -25px 18px -14px inset,rgba(54, 18, 67, 0.25) 0 1px 2px,rgba(56, 2, 97, 0.25) 0 2px 4px,rgba(198, 131, 200, 0.25) 0 4px 8px,rgba(230, 112, 238, 0.25) 0 8px 16px,rgba(141, 24, 154, 0.25) 0 16px 32px;
       transform: scale(1.05) rotate(-1deg);
-      text-shadow: yellow 0 0 10px;
+      text-shadow: #fcfbfc 0 0 10px;
       font-size: 10px;
     }
 
+
+.beat-making h2 {
+    color: #5a1b57;
+    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
+    1px 1px #ded40a, -1px -1px #cbc212, 1px -1px #91288c, -1px 1px #91288c;
+}
+
+.releases h2 {
+    color: #5a1b57;
+    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
+    1px 1px #ded40a, -1px -1px #cbc212, 1px -1px #91288c, -1px 1px #91288c;
+}
+
+.beat-stars h2 {
+    color: #5a1b57;
+    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
+    1px 1px #ded40a, -1px -1px #cbc212, 1px -1px #91288c, -1px 1px #91288c;
+}
+
+.process-grid h3 {
+    color: #5a1b57;
+    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
+    1px 1px #ded40a, -1px -1px #cbc212, 1px -1px #91288c, -1px 1px #91288c;
+}
+
+.studio h2 {
+    color: #5a1b57;
+    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
+    1px 1px #ded40a, -1px -1px #cbc212, 1px -1px #91288c, -1px 1px #91288c;
+}
+
+.ensamble h3,h4 {
+    text-transform: uppercase;
+    color: #5a1b57;
+    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
+    1px 1px #ded40a, -1px -1px #cbc212, 1px -1px #91288c, -1px 1px #91288c;
+}
+
+.process-grid p {
+    text-align: center;
+    font-family: "Swanky and Moo Moo", serif;
+    font-size: 1.6rem;
+    color: #290036;
+    text-shadow: 0.5px 0 #000000;
+}
+
+.beat-stars P {
+    text-align: center;
+    font-family: "Fontdiner Swanky", serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #290036;
+    text-shadow: 0.5px 0 #ffffff;
+}
+
 .carousel {
     padding: 8px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+.studio01 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 70px;
+} 
+
+
+.studio01 img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 3px solid #440044;
+    box-shadow: 1px 4px 6px rgb(180, 135, 252);
+    filter: drop-shadow(16px 16px 20px #440044) invert(10%);
 }
 
 .carousel img {
@@ -187,6 +274,12 @@ section {
     gap: 30px;
 }
 
+.studio {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
 .icon {
     width: 48px;
     height: 48px;
@@ -200,7 +293,7 @@ section {
 }
 
 .studio-image img {
-    width: 100%;
+    width: 250px;
     height: auto;
     transition: transform 0.3s;
 }
@@ -233,10 +326,17 @@ section {
     font-weight: bold;
 }
 
+.ensamble {
+    text-align: center;
+    margin-top: 70px;
+}
+
 footer {
+    font-family: "Julius Sans One", serif;
     text-align: center;
     padding: 20px 0;
-    color: #777;
+    color: #ffffff;
+    text-shadow: #000000 0 0 10px;
 }
 
 @media (max-width: 768px) {
