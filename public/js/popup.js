@@ -1,3 +1,10 @@
+// Inicializar EmailJS
+try {
+    emailjs.init(emailjsConfig.userID);
+    console.log('EmailJS initialized successfully');
+} catch (error) {
+    console.error('Error initializing EmailJS:', error);
+}
 // Mostrar el pop-up al hacer clic en el botón de contacto
 document.getElementById('contactButton').addEventListener('click', function() {
     document.getElementById('contactPopup').style.display = 'block';
@@ -21,7 +28,7 @@ window.addEventListener('click', function(event) {
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar el envío del formulario por defecto
 
-    emailjs.sendForm('service_dsna02d', 'template_iew81gs', this)
+    emailjs.sendForm(emailjsConfig.serviceID,emailjsConfig.templateID, this)
         .then(function() {
             document.getElementById('contactPopup').style.display = 'none';
             document.getElementById('successPopup').style.display = 'block';
