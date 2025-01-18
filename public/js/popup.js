@@ -26,7 +26,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('/send-email', {
+    fetch('/api/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

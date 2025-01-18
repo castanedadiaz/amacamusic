@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/send-email.js",
+        "use": "@vercel/node",
+        "config": {
+            "maxDuration": 5000,
+            "runtime": "nodejs18.x"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/send-email",
+        "dest": "/api/send-email.js"
+      }
+    ],
+    "files": [
+      "api/send-email.js"
+    ]
+  }
