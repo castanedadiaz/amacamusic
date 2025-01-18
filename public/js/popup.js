@@ -43,6 +43,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Error al enviar el mensaje');
+        alert('Error al enviar el mensaje: ' + error.message);
     });
 });
