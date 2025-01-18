@@ -3,11 +3,7 @@
     "builds": [
       {
         "src": "api/send-email.js",
-        "use": "@vercel/node",
-        "config": {
-          "maxDuration": 5000,
-          "runtime": "nodejs18.x"
-        }
+        "use": "@vercel/node"
       },
       {
         "src": "public/**/*",

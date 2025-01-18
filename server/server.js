@@ -11,7 +11,7 @@ app.use(express.static('public')); // Servir archivos estáticos desde la carpet
 // Configurar EmailJS
 emailjs.init(process.env.EMAILJS_USER); // Inicializar EmailJS con el userID
 
-app.post('/send-email', (req, res) => {
+app.post('api/send-email', (req, res) => {
     const { name, whatsapp, email, message } = req.body;
 
     const templateParams = {
