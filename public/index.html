@@ -32,7 +32,7 @@
             <div id="contactPopup" class="popup" style="font-family:Swanky and Moo Moo; font-size: 22px;">
                 <div class="popup-content">
                     <span class="close">&times;</span>
-                    <form id="contactForm">
+                    <form id="contactForm" action="/send-email" method="POST">
                         <label for="name">Nombre:</label>
                         <input type="text" id="name" name="name" required>
                         
@@ -232,8 +232,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/popup.js" ></script>
 </body>

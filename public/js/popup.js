@@ -1,10 +1,4 @@
-// Inicializar EmailJS
-try {
-    emailjs.init(emailjsConfig.userID);
-    console.log('EmailJS initialized successfully');
-} catch (error) {
-    console.error('Error initializing EmailJS:', error);
-}
+
 // Mostrar el pop-up al hacer clic en el botón de contacto
 document.getElementById('contactButton').addEventListener('click', function() {
     document.getElementById('contactPopup').style.display = 'block';
@@ -24,15 +18,31 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Enviar el formulario usando EmailJS
+
+// Enviar el formulario usando Fetch API
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar el envío del formulario por defecto
 
-    emailjs.sendForm(emailjsConfig.serviceID,emailjsConfig.templateID, this)
-        .then(function() {
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
             document.getElementById('contactPopup').style.display = 'none';
             document.getElementById('successPopup').style.display = 'block';
-        }, function(error) {
-            alert('Error al enviar el mensaje: ' + JSON.stringify(error));
-        });
+        } else {
+            alert('Error al enviar el mensaje');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error al enviar el mensaje');
+    });
 });
