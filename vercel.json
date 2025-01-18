@@ -5,18 +5,23 @@
         "src": "api/send-email.js",
         "use": "@vercel/node",
         "config": {
-            "maxDuration": 5000,
-            "runtime": "nodejs18.x"
+          "maxDuration": 5000,
+          "runtime": "nodejs18.x"
         }
+      },
+      {
+        "src": "public/**/*",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
       {
-        "src": "/send-email",
+        "src": "/api/send-email",
         "dest": "/api/send-email.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/public/$1"
       }
-    ],
-    "files": [
-      "api/send-email.js"
     ]
   }
