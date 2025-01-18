@@ -38,11 +38,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             document.getElementById('contactPopup').style.display = 'none';
             document.getElementById('successPopup').style.display = 'block';
         } else {
-            alert('Error al enviar el mensaje');
+            response.text().then(text => {
+                alert('Error al enviar el mensaje: ' + text);
+            });
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Error al enviar el mensaje: ' + error.message);
+        alert('Error al enviar el mensajee: ' + error.message);
     });
 });
