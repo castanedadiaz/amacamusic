@@ -1,7 +1,6 @@
 const emailjs = require('emailjs-com');
-require('dotenv').config();
 
-module.exports = async (req, res) => {
+exports.sendEmail = async (req, res) => {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
@@ -16,6 +15,12 @@ module.exports = async (req, res) => {
     };
 
     try {
+        console.log('Environment Variables:', {
+            EMAILJS_USER: process.env.EMAILJS_USER,
+            EMAILJS_SERVICE_ID: process.env.EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID: process.env.EMAILJS_TEMPLATE_ID
+        });
+        console.log('Sending email with params:', templateParams);
         const response = await emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, templateParams, process.env.EMAILJS_USER);
         console.log('SUCCESS!', response.status, response.text);
         res.status(200).send('Mensaje enviado con éxito');
