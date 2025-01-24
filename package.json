@@ -14,7 +14,6 @@
     "@emailjs/nodejs": "^5.0.2",
     "body-parser": "^1.20.3",
     "emailjs": "^4.0.3",
-    "emailjs-com": "^3.2.0",
     "express": "^4.21.2"
   }
 }

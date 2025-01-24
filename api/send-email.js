@@ -1,26 +1,29 @@
-const emailjs = require('emailjs-com');
-require('dotenv').config();
+import emailjs from '@emailjs/nodejs';
 
-module.exports = async (req, res) => {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
-    }
-
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
     const { name, whatsapp, email, message } = req.body;
 
-    const templateParams = {
-        name: name,
-        whatsapp: whatsapp,
-        email: email,
-        message: message
-    };
+    const userId = muvP16-LeD4NwM6la; // Tu User ID de EmailJS
+    const serviceId = service_dsna02d; // Tu Service ID de EmailJS
+    const templateId = template_iew81gs; // Tu Template ID de EmailJS
 
     try {
-        const response = await emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, templateParams, process.env.EMAILJS_USER);
-        console.log('SUCCESS!', response.status, response.text);
-        res.status(200).send('Mensaje enviado con éxito');
-    } catch (err) {
-        console.error('FAILED...', err);
-        res.status(500).send('Error al enviar el mensaje');
+      // Enviar el correo usando los datos recibidos del formulario
+      const response = await emailjs.send(serviceId, templateId, {
+        user_name: name,
+        user_whatsapp: whatsapp,
+        user_email: email,
+        user_message: message
+      }, userId);
+
+      console.log('Email enviado:', response);
+      res.status(200).json({ message: '¡Correo enviado con éxito!' });
+    } catch (error) {
+      console.error('Error enviando el email:', error);
+      res.status(500).json({ message: 'Hubo un error al enviar el correo' });
     }
-};
+  } else {
+    res.status(405).json({ message: 'Método no permitido' });
+  }
+}

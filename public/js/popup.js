@@ -18,33 +18,3 @@ window.addEventListener('click', function(event) {
     }
 });
 
-
-// Enviar el formulario usando Fetch API
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío del formulario por defecto
-
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
-
-    fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => {
-        if (response.ok) {
-            document.getElementById('contactPopup').style.display = 'none';
-            document.getElementById('successPopup').style.display = 'block';
-        } else {
-            response.text().then(text => {
-                alert('Error al enviar el mensaje: ' + text);
-            });
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error al enviar el mensajee: ' + error.message);
-    });
-});
