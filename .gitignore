@@ -1,9 +1,3 @@
-# Ignorar el archivo de configuración
-config.js
-
-# Ignorar el archivo de configuración
-public/js/config.js
-
 # Ignorar node_modules
 node_modules
 
