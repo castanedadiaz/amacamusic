@@ -280,6 +280,33 @@ section {
     text-align: center;
 }
 
+.beat-stars h1 {
+    font-family: "Bungee Shade", serif;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 258px;
+    margin-top: 0;
+    font-size: 3.5rem;
+    color: #5a1b57;
+    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #5a1b57,
+    1px 1px #ded40a, -1px -1px #cbc212, 1px -1px #91288c, -1px 1px #91288c;
+}
+
+.beat-stars h1:hover {
+    cursor: pointer;
+    transition-duration: 1100ms;
+    text-shadow: 1px 0 #5a1b57, -2px 0 #ffffff, 0 2px #fcf8fc, 0 -1px #91288c,
+    1px 1px #91288c, -1px -1px #91288c, 1px -1px #f5eef5, -1px 1px #91288c;
+}
+
+.bungee-shade-regular {
+    font-family: "Bungee Shade", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 .cta-button {
     display: inline-block;
     background-color: #333;
