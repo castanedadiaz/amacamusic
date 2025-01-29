@@ -19,6 +19,7 @@ body {
     color-scheme: light;
     background: linear-gradient(to right,#ffffffcd, #e99e1b92, #92238d8b, #662c9083);
     color: rgb(51, 51, 51);
+    overflow-y: scroll;
 }
 
 .header {
@@ -74,7 +75,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0;
 }
@@ -321,7 +322,8 @@ section {
 
 .studio-image img {
     width: 250px;
-    height: auto;
+    height: 230px;
+    object-fit: cover;
     transition: transform 0.3s;
     border-radius: 12px;
 }
