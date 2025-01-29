@@ -18,6 +18,25 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          if (!localStorage.getItem('cookieConsent')) {
+            document.getElementById('cookieConsent').style.display = 'block';
+          }
+          document.getElementById('acceptCookie').addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookieConsent').style.display = 'none';
+          });
+          document.getElementById('closeCookieConsent').addEventListener('click', function() {
+            document.getElementById('cookieConsent').style.display = 'none';
+          });
+        });
+      </script>
+    <div id="cookieConsent">
+        <div id="closeCookieConsent">x</div>
+        Este sitio web utiliza cookies para mejorar su experiencia. <a href="politica-de-cookies.html" target="_blank">Leer más</a>
+        <button id="acceptCookie">Aceptar</button>
+      </div>
     <div class="container">
         <header class="header">
             <img src="img/logos/400Logo.png" alt="Amaca Estudio de Grabación" class="logo">
