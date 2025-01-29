@@ -295,6 +295,10 @@ section {
     background-color: #555;
 }
 
+.process-grid {
+    margin-top: 50px;
+}
+
 .process-grid, .studio-grid {
     display: grid;
     text-align: center;
