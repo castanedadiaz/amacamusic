@@ -35,30 +35,53 @@ body {
     display: block;
 }
 
-.header h1 {
+.header .logo-title {
+    display: block;
     margin: 0 auto;
     width: 258px;
     margin-top: 0;
     font-size: 3.5rem;
-    background: -webkit-linear-gradient(#ffffff, #e99e1b49, #92238d90,#662c9083);
+    background: -webkit-linear-gradient(
+        #ffffff,
+        #e99e1b49,
+        #92238d90,
+        #662c9083
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 1px 0 #91288c, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
-    1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, -1px 1px #ffffff;
+    text-shadow:
+        1px 0 #91288c,
+        -2px 0 #ffffff,
+        0 2px #ffffff,
+        0 -1px #ffffff,
+        1px 1px #ffffff,
+        -1px -1px #ffffff,
+        1px -1px #ffffff,
+        -1px 1px #ffffff;
 }
 
-.header h1:hover {
+.header .logo-title:hover {
     cursor: pointer;
     transition-duration: 1100ms;
-    text-shadow: 1px 0 #f5f3f4, -2px 0 #91288c, 0 2px #91288c, 0 -1px #91288c,
-    1px 1px #91288c, -1px -1px #91288c, 1px -1px #91288c, -1px 1px #91288c;
+    text-shadow:
+        1px 0 #f5f3f4,
+        -2px 0 #91288c,
+        0 2px #91288c,
+        0 -1px #91288c,
+        1px 1px #91288c,
+        -1px -1px #91288c,
+        1px -1px #91288c,
+        -1px 1px #91288c;
 }
+
 
 .julius-sans-one-regular {
     font-family: "Julius Sans One", serif;
     font-weight: 400;
     font-style: normal;
   }
+
+
 
   .fontdiner-swanky-regular {
     font-family: "Fontdiner Swanky", serif;
@@ -120,19 +143,22 @@ section {
 .hero h1 {
     font-size: 3em;
     color: #ffffff;
-    margin-bottom: 20px;
-    text-shadow: 1px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -1px #000000,
-    1px 1px #ded40a, -1px -1px #cbc212, 1px -1px #91288c, -1px 1px #91288c;
+    margin-bottom: 18px;
+    text-shadow:
+        1px 0 #000000,
+        -1px 0 #000000,
+        0 1px #000000,
+        1px 1px #91288c;
 }
 
-.hero p {
+.hero .hero-subtitle {
     font-family: "Swanky and Moo Moo", serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #000000;
-    text-shadow: 1px 0 #ffffff, -2px 0 #ffffff, 0 2px #ffffff, 0 -1px #ffffff,
-    1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, -1px 1px #ffffff;
+    opacity: 0.95;
+    text-shadow:
+        1px 0 #ffffff,
 }
-
 
 .releases h2 {
     text-align: center;
@@ -236,6 +262,16 @@ section {
     margin-bottom: 70px;
 }
 
+.carousel img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1.5px solid #dbd3db;
+    box-shadow: 0 4px 6px rgb(187, 176, 195);
+}
+
 .studio01 {
     text-align: center;
     margin-top: 60px;
@@ -252,16 +288,6 @@ section {
     border: 3px solid #440044;
     box-shadow: 1px 4px 6px rgb(180, 135, 252);
     filter: drop-shadow(16px 16px 20px #440044) invert(10%);
-}
-
-.carousel img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 8px;
-    border: 1.5px solid #dbd3db;
-    box-shadow: 0 4px 6px rgb(187, 176, 195);
 }
 
 .emojis {
@@ -527,3 +553,12 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero .hero-subtitle {
+        font-size: 1.4rem;
+    }
+}

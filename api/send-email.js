@@ -6,14 +6,35 @@ emailjs.init({
 });
 
 export default async function handler(req, res) {
-  // Configura CORS manualmente si es necesario
   cors()(req, res, async () => {
+
     if (req.method !== 'POST') {
       return res.status(405).json({ message: 'Método no permitido' });
     }
 
-    const { name, whatsapp, email, message } = req.body;
+    const { name, whatsapp, email, message, recaptchaToken } = req.body;
 
+    if (!recaptchaToken) {
+      return res.status(400).json({ message: 'reCAPTCHA faltante' });
+    }
+
+    /* 🔐 VALIDACIÓN reCAPTCHA */
+    const googleRes = await fetch(
+      'https://www.google.com/recaptcha/api/siteverify',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+      }
+    );
+
+    const captchaResult = await googleRes.json();
+
+    if (!captchaResult.success) {
+      return res.status(403).json({ message: 'reCAPTCHA inválido' });
+    }
+
+    /* 📧 ENVÍO EMAIL */
     try {
       await emailjs.send(
         process.env.EMAILJS_SERVICE_ID,
