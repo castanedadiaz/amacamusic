@@ -92,20 +92,24 @@
                     <form id="contact-form">
                         <label for="name">Nombre:</label>
                         <input type="text" id="name" name="name" required>
-                        
+                        <small class="error" id="error-name"></small>
+
                         <label for="whatsapp">WhatsApp:</label>
                         <input type="text" id="whatsapp" name="whatsapp" required>
+                        <small class="error" id="error-whatsapp"></small>
                         
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Ingresá un email válido (ej: nombre@dominio.com)">
-                        
+                        <small class="error" id="error-email"></small>
+
                         <label for="message">Mensaje:</label>
                         <textarea id="message" name="message" required></textarea>
+                        <small class="error" id="error-message"></small>
 
                           <!-- reCAPTCHA -->
                         <div class="g-recaptcha" data-sitekey="6Le2wEQsAAAAAPBwpwUQ3eDnn53z1Tp_OOKYW1lB"></div>
                         
-                        <button type="submit" id="enviar" style="font-family:Fontdiner Swanky; font-size: 21px;">Enviar</button>
+                        <button type="submit" id="enviar" disabled style="font-family:Fontdiner Swanky; font-size: 21px;">Enviar</button>
                     </form>
                 </div>
             </div>

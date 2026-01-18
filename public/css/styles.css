@@ -112,6 +112,17 @@ body {
     text-align: center;
 }
 
+.error {
+  color: #d32f2f;
+  font-size: 0.8rem;
+  display: none;
+}
+
+#enviar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 header {
     text-align: center;
     padding: 20px 0;
