@@ -113,8 +113,8 @@ body {
 }
 
 .error {
-  color: #d32f2f;
-  font-size: 0.8rem;
+  color: #ff9b9b;
+  font-size: 1.0rem;
   display: none;
 }
 
