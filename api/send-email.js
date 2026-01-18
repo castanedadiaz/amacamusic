@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/nodejs';
 import cors from 'cors';
 
+
 emailjs.init({
   publicKey: process.env.EMAILJS_PUBLIC_KEY,
 });
