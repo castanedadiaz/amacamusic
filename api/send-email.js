@@ -14,6 +14,33 @@ export default async function handler(req, res) {
 
     const { name, whatsapp, email, message, recaptchaToken } = req.body;
 
+        /* ==========================
+       VALIDACIONES BACKEND
+       (ANTES de reCAPTCHA)
+    ========================== */
+     // Nombre
+    if (!name || name.trim().length < 3) {
+      return res.status(400).json({ message: 'Nombre inválido' });
+    }
+
+    // Email (ACÁ va el emailRegex)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ message: 'Email inválido' });
+    }
+
+    // Teléfono
+    const phoneRegex = /^\+?[0-9\s\-]{7,15}$/;
+    if (!phoneRegex.test(whatsapp)) {
+      return res.status(400).json({ message: 'Teléfono inválido' });
+    }
+
+    // Mensaje
+    if (!message || message.trim().length < 15) {
+      return res.status(400).json({ message: 'Mensaje muy corto' });
+    }
+
+
     if (!recaptchaToken) {
       return res.status(400).json({ message: 'reCAPTCHA faltante' });
     }
